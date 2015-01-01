@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="2">
+				Nome: <h:inputText value="#{livroBean.livro.nome}"/>
+				Autor: <h:inputText value="#{livroBean.livro.autor}"/>
+				Ano de Publicação: <h:inputText value="#{livroBean.livro.anoPublicacao}"/>
+				Preço Venda: <h:inputText value="#{livroBean.livro.precoVenda}"/>
+				Preço Aluguel: <h:inputText value="#{livroBean.livro.precoAluguel}"/>
+				Descrição: <h:inputText value="#{livroBean.livro.descricao}"/>
+				Quantidade Venda: <h:inputText value="#{livroBean.livro.quantVenda}"/>
+				Quantidade Aluguel: <h:inputText value="#{livroBean.livro.quantAluguel}"/>
+				Categoria: <h:inputText value="#{livroBean.livro.categoria}"/>
+				Imagem: <h:inputText value="#{livroBean.livro.imagem}"/>			
+				
+			</h:panelGrid>
+			
+			<h:commandButton value="Salvar" action="#{livroBean.salva}" />
+		</h:form>
+	</h:body>
+</html>

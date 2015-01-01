@@ -1,16 +1,26 @@
 package main.webapp.model;
 
-import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-public class Livro {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//import javax.validation.constraints.NotNull;
+
+@Entity
+public class Livro implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idLivro;
-	@NotNull
 	private String nome;
 	private String autor;
 	private int anoPublicacao;
-	private float precoVenda;
-	private float precoAluguel;
+	private double precoVenda;
+	private double precoAluguel;
 	private String descricao;
 	private int quantVenda;
 	private int quantAluguel;
@@ -19,7 +29,7 @@ public class Livro {
 	private String imagem;
 	private int categoria;
 	
-	private int num;
+	/*private int num;
 	private int nume;
 	
 	public String imprime(){
@@ -34,6 +44,15 @@ public class Livro {
 	public void setNum(int num) {
 		this.num = num;
 	}
+	
+	public int getNume() {
+		return nume;
+	}
+
+	public void setNume(int nume) {
+		this.nume = nume;
+	}
+	*/
 	
 
 	public int getIdLivro() {
@@ -68,7 +87,7 @@ public class Livro {
 		this.anoPublicacao = anoPublicacao;
 	}
 
-	public float getPrecoVenda() {
+	public double getPrecoVenda() {
 		return precoVenda;
 	}
 
@@ -76,7 +95,7 @@ public class Livro {
 		this.precoVenda = precoVenda;
 	}
 
-	public float getPrecoAluguel() {
+	public double getPrecoAluguel() {
 		return precoAluguel;
 	}
 
@@ -140,13 +159,7 @@ public class Livro {
 		this.categoria = categoria;
 	}
 
-	public int getNume() {
-		return nume;
-	}
-
-	public void setNume(int nume) {
-		this.nume = nume;
-	}
+	
 	
 
 
